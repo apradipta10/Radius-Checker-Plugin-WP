@@ -29,20 +29,8 @@ function radius_checker_function(){
     include('main.php');
 }
 
-function rc_shortcode($atts) {
-    
-    $data = shortcode_atts(
-        array(
-            'user_address' => $user_address,
-            'rc_gmaps_api_key_user' => get_option('rc_gmaps_api_key')
-        ),$atts
-    );
-    
-    return '
-    <div id="rc_shortcode_show"> '.$data['rc_gmaps_api_key_user']. '</div>
-    ';
-}
 
+include('shortcode.php');
 //define shortcode radius_checker
 add_shortcode('radius_checker', 'rc_shortcode');
 //call hook add_menu with add_menu_admin function
