@@ -10,14 +10,14 @@ echo '
     <script>
       var map;
       var src = "'.get_option("rc_gmaps_zone_url").'";
-
-      function initMap() {
       
+      function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
           center: new google.maps.LatLng(-37.81340271120419, 144.9541013005446),
-          zoom: 15
+          zoom: 15,
+          mapTypeId: "roadmap"
         });
-        
+
         var kmlLayer = new google.maps.KmlLayer(src, {
           suppressInfoWindows: true,
           preserveViewport: false,
@@ -25,6 +25,8 @@ echo '
         });
         
       }
+
+    //  
     </script>
     <script async
     src="https://maps.googleapis.com/maps/api/js?key='.get_option("rc_gmaps_api_key").'&callback=initMap">
