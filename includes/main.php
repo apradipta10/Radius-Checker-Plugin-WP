@@ -1,5 +1,5 @@
 <?php
-    if ($_POST['gmaps_api_key'] != '') {
+    if (isset($_POST['gmaps_api_key'])) {
         update_option('rc_gmaps_api_key', $_POST['gmaps_api_key']);
         update_option('rc_gmaps_zone_url', $_POST['gmaps_zone_url']);
         // update_option('rc_action_url_inside', $_POST['action_url_inside']);
@@ -41,16 +41,6 @@
                                     </td>
                                     </tr>
                                     
-                                     <tr>
-                                    <th scope="row"><label for="action_url_inside">Action URL (Inside)</label></th>
-                                    <td><input name="action_url_inside" type="text" id="action_url_inside" value="'.get_option('rc_action_url_inside').'" class="regular-text"></td>
-                                    </tr>
-                                    
-                                    <tr>
-                                    <th scope="row"><label for="action_url_outside">Action URL (Outside)</label></th>
-                                    <td><input name="action_url_outside" type="text" id="action_url_outside" value="'.get_option('rc_action_url_outside').'" class="regular-text"></td>
-                                    </tr>
-                                    
                                     <tr>
                                         <td style="padding-left:0;">
                                         <p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes"></p>
@@ -85,4 +75,13 @@
     </div>
     ';
     
+    //  <tr>
+    //                                 <th scope="row"><label for="action_url_inside">Action URL (Inside)</label></th>
+    //                                 <td><input name="action_url_inside" type="text" id="action_url_inside" value="'.get_option('rc_action_url_inside').'" class="regular-text"></td>
+    //                                 </tr>
+                                    
+    //                                 <tr>
+    //                                 <th scope="row"><label for="action_url_outside">Action URL (Outside)</label></th>
+    //                                 <td><input name="action_url_outside" type="text" id="action_url_outside" value="'.get_option('rc_action_url_outside').'" class="regular-text"></td>
+    //                                 </tr>
 ?>
