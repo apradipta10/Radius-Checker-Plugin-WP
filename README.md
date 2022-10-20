@@ -13,6 +13,10 @@ Custom plugin that can check whether an address is inside or outside of the serv
 2. Fill Google Map API key section. (learn this [documentation](https://developers.google.com/maps/documentation/javascript/get-api-key) to get Google maps API Key
 3. Fill Google Map Zone URL section.
 
+for using shortcode you can put code below into the page that you want
+```
+[radius_checker]
+```
 
 ### Demo
 URL: de.gagapress.tech/nigol132 \
